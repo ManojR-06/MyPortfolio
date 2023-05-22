@@ -1,0 +1,132 @@
+<header>
+
+</header>
+
+<section class="main container">
+  <label class="title">Frontend Developer & Tester</label>
+  <label class="description">I design and code beautifully simple things, and I love what I do.</label>
+  <img src="../../svgs/avatar.svg" alt="" class="avatar">
+</section>
+
+<img src="../../svgs/devices.svg" alt="" class="devices">
+
+<section class="introduction">
+  <div class="container">
+    <label class="name">Hi, I’m Manoj. Nice to meet you.</label>
+    <p class="description">
+      As a frontend developer since 2019, I've worked on diverse projects, collaborated with talented professionals, and
+      contributed to exceptional digital products. I continuously refine my skills, embracing new technologies to
+      deliver high-quality frontend solutions.
+      <LinkTo class="link" @route='about'>Know more</LinkTo>
+    </p>
+  </div>
+</section>
+
+<section class="experience container">
+  <label class="title">WORK EXPERIENCE</label>
+  <div class="organisation-container">
+    <img src="../../svgs/zoho-logo.svg" alt="" class="logo">
+    <div class="details--wrapper">
+      <label class="title">Software Developer</label>
+      <a href="https://www.zohocorp.com/" target="_blank" rel="noopener noreferrer" class="org-name">
+        Zoho Corporation
+        <svg class="icon svg-inline--fa fa-arrow-up-right-from-square mr-2" aria-hidden="true" focusable="false"
+          data-prefix="fal" data-icon="arrow-up-right-from-square" role="img" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512" data-fa-i2svg="">
+          <path fill="#FFF"
+            d="M336 0c-8.8 0-16 7.2-16 16s7.2 16 16 16H457.4L212.7 276.7c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L480 54.6V176c0 8.8 7.2 16 16 16s16-7.2 16-16V16c0-8.8-7.2-16-16-16H336zM64 64C28.7 64 0 92.7 0 128V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V304c0-8.8-7.2-16-16-16s-16 7.2-16 16V448c0 17.7-14.3 32-32 32H64c-17.7 0-32-14.3-32-32V128c0-17.7 14.3-32 32-32H208c8.8 0 16-7.2 16-16s-7.2-16-16-16H64z">
+          </path>
+        </svg>
+      </a>
+      <p class="details">
+        Extensive expertise in modern frontend technologies such as HTML, CSS, JavaScript, and frameworks like EmberJs.
+      </p>
+      <p class="details">
+        Collaborated effectively with cross-functional teams, including designers, backend developers, and product
+        managers, to develop a diverse range of products.
+      </p>
+      <p class="details">
+        Managed end-to-end projects independently as a solo frontend developer, overseeing all aspects of development
+        and delivery.
+      </p>
+      <p class="details">
+        With proficiency in both manual and automation testing, I have played a pivotal role in ensuring the delivery of
+        high-quality software.
+      </p>
+    </div>
+  </div>
+  <label class="title">MY TOOLBOX & THINGS I CAN DO</label>
+  <p class="description">The skills, tools and technologies I use to bring your products to life:</p>
+  <div class="tools-container">
+    {{#each this.toolsList as | tool |}}
+    <div class="tool">
+      <img src="../../svgs/{{tool.iconName}}" alt="" class="tools-icon">
+      <label class="label">{{tool.label}}</label>
+    </div>
+    {{/each}}
+  </div>
+</section>
+
+<section class="projects container">
+  <label class="title">My Recent Work</label>
+  <p class="description">Here are a selection of stuff i've built.</p>
+  <div class="projects-list">
+
+    {{#each this.projectsList as | project |}}
+    <div class="project">
+      <img src={{project.imgName}} alt="" class="img">
+      <div class="details">
+        <label class="title">{{project.title}}</label>
+        <label class="description">{{project.description}}</label>
+        <a href={{project.knowMoreLink}} target="_blank" rel="noopener noreferrer" class="link--wrapper">
+          <img src="../../svgs/link.svg" alt="" class="icon">
+          Know more
+        </a>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</section>
+
+<div class="hire-me container">
+  <label class="lets-connect">Lets connect</label>
+  <label class="contact">Interested in working together? Get in touch for opportunities or just to say hi! I’ll buy the
+    coffee.</label>
+  <div class="mail-container">
+    <a href="mailto:manojravi.official@gmail.com" aria-label="Send an email" class="mail-button">
+      <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.21 10.17" class="mail-icon" fill="#FFF">
+        <g id="letter">
+          <g id="Path_3525">
+            <path
+              d="m10.69,10.17H1.52c-.84,0-1.52-.68-1.52-1.52v-4.07c0-.28.22-.5.5-.5s.5.22.5.5v4.07c0,.29.23.52.52.52h9.17c.29,0,.52-.23.52-.52v-4.07c0-.28.22-.5.5-.5s.5.22.5.5v4.07c0,.84-.68,1.52-1.52,1.52Z"
+              fill="inherit" />
+          </g>
+          <g id="Path_3526">
+            <path
+              d="m6.1,6.09c-.08,0-.17-.02-.24-.06L.26,2.98c-.16-.09-.26-.26-.26-.44v-1.02C0,.68.68,0,1.52,0h9.17c.84,0,1.52.68,1.52,1.52v1.02c0,.18-.1.35-.26.44l-5.6,3.06c-.07.04-.16.06-.24.06ZM1,2.24l5.1,2.78,5.1-2.78v-.72c0-.29-.23-.52-.52-.52H1.52c-.29,0-.52.23-.52.52v.72Zm10.71.3h0,0Z"
+              fill="inherit" />
+          </g>
+        </g>
+      </svg>
+      {{!-- <img src="../../svgs/mail.svg" alt="" class="mail-icon"> --}}
+      Let's do this
+    </a>
+  </div>
+</div>
+
+<footer class="footer">
+  <p class="social">Feeling social? Find me on these online spaces too!</p>
+  <div class="media-container">
+    {{#each this.mediaLinks as | media |}}
+    {{#if media.newTabAction}}
+    <a href={{media.href}} target="_blank" rel="noopener noreferrer" aria-label={{media.ariaLabel}} class="media">
+      <img src="../../svgs/{{media.imgName}}" alt="" class="media-icons">
+    </a>
+    {{else}}
+    <a href={{media.href}} aria-label={{media.ariaLabel}} class="media">
+      <img src="../../svgs/{{media.imgName}}" alt="" class="media-icons">
+    </a>
+    {{/if}}
+    {{/each}}
+  </div>
+</footer>
