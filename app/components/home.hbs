@@ -17,13 +17,13 @@
       As a frontend developer since 2019, I've worked on diverse projects, collaborated with talented professionals, and
       contributed to exceptional digital products. I continuously refine my skills, embracing new technologies to
       deliver high-quality frontend solutions.
-      <LinkTo class="link" @route='about'>Know more</LinkTo>
+      {{!-- <LinkTo class="link" @route='about'>Know more</LinkTo> --}}
     </p>
   </div>
 </section>
 
 <section class="experience container">
-  <label class="title">WORK EXPERIENCE</label>
+  <label class="title">Work Experience</label>
   <div class="organisation-container">
     <img src="../../svgs/zoho-logo.svg" alt="" class="logo">
     <div class="details--wrapper">
@@ -55,7 +55,7 @@
       </p>
     </div>
   </div>
-  <label class="title">MY TOOLBOX & THINGS I CAN DO</label>
+  <label class="title">My Toolbox & Things I Can Do</label>
   <p class="description">The skills, tools and technologies I use to bring your products to life:</p>
   <div class="tools-container">
     {{#each this.toolsList as | tool |}}
@@ -118,15 +118,15 @@
   <p class="social">Feeling social? Find me on these online spaces too!</p>
   <div class="media-container">
     {{#each this.mediaLinks as | media |}}
-    {{#if media.newTabAction}}
-    <a href={{media.href}} target="_blank" rel="noopener noreferrer" aria-label={{media.ariaLabel}} class="media">
-      <img src="../../svgs/{{media.imgName}}" alt="" class="media-icons">
-    </a>
-    {{else}}
-    <a href={{media.href}} aria-label={{media.ariaLabel}} class="media">
-      <img src="../../svgs/{{media.imgName}}" alt="" class="media-icons">
-    </a>
-    {{/if}}
+      {{#if media.newTabAction}}
+        <a href={{media.href}} target="_blank" rel="noopener noreferrer" aria-label={{media.ariaLabel}} class="media {{media.inputClass}}">
+          <img src="../../svgs/{{media.imgName}}" alt="" class="media-icons {{media.inputClass}}">
+        </a>
+      {{else}}
+        <a href={{media.href}} aria-label={{media.ariaLabel}} class="media">
+          <img src="../../svgs/{{media.imgName}}" alt="" class="media-icons">
+        </a>
+      {{/if}}
     {{/each}}
   </div>
 </footer>

@@ -109,6 +109,19 @@ $value in $font-weights {
 $primary-font: #141c3a;
 $secondary-font: rgba(10, 10, 10, 0.9);
 
+.page-title {
+  font-size: 48px;
+}
+.section-title {
+  font-size: 30px;
+}
+.normal-title {
+  font-size: 20px;
+}
+.primary-description {
+  font-size: 20px;
+}
+
 
 /* ---------- TAG Styles ---------- */
 * {
@@ -162,7 +175,8 @@ p {
   padding: 48px 24px;
 
   .title {
-    font-size: 48px;
+    @extend .page-title;
+
     font-weight: 700;
     margin-bottom: 24px;
     color: $primary-font;
@@ -170,7 +184,8 @@ p {
   }
 
   .description {
-    font-size: 20px;
+    @extend .primary-description;
+
     margin-bottom: 24px;
     text-align: center;
   }
@@ -182,8 +197,9 @@ p {
 }
 
 .devices {
-  padding: 0px 24px;
   max-width: 860px;
+  width: 100%;
+  padding: 0px 24px;
 }
 
 .introduction {
@@ -196,7 +212,8 @@ p {
 
   .container {
     .name {
-      font-size: 30px;
+      @extend .section-title;
+
       margin-bottom: 36px;
       color: #FFF;
       text-align: center;
@@ -217,7 +234,7 @@ p {
 }
 
 .experience.container {
-  width: 100%;
+  width: calc(100% - 48px);
   max-width: 1344px;
   background-color: #FFF;
   box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8;
@@ -226,9 +243,10 @@ p {
   padding: 70px 45px;
 
   .title {
+    @extend .section-title;
+
     margin-bottom: 24px;
-    font-size: 25px;
-    font-weight: 500;
+    font-weight: 700;
     color: $primary-font;
     text-align: center;
   }
@@ -291,6 +309,9 @@ p {
       flex-grow: 1;
 
       .title {
+        @extend .normal-title;
+
+        font-weight: 500;
         margin-bottom: 5px;
       }
 
@@ -334,7 +355,8 @@ p {
   padding-top: 144px;
 
   .title {
-    font-size: 30px;
+    @extend .section-title;
+
     font-weight: 700;
     margin-bottom: 26px;
   }
@@ -364,13 +386,13 @@ p {
         align-items: center;
 
         .title {
-          font-size: 20px;
+          @extend .normal-title;
+
           font-weight: 500;
           text-align: center;
           margin: 20px 0px;
         }
         .description {
-          font-size: 18px;
           text-align: center;
           margin-bottom: 20px;
         }
@@ -390,32 +412,11 @@ p {
         }
       }
     }
-
-    .card {
-      width: 33%;
-      height: 289px;
-      border-radius: 10px;
-      padding: 60px 35px;
-      box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      .title {
-        font-size: 20px;
-        font-weight: 700;
-        text-align: center;
-      }
-      .description {
-        text-align: center;
-      }
-    }
   }
 }
 
 .hire-me.container {
-  width: 100%;
+  width: calc(100% - 48px);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -428,10 +429,11 @@ p {
   margin-bottom: -85px;
 
   .lets-connect {
+    @extend .normal-title;
+
     flex-grow: 1;
     flex-basis: 0;
-    font-size: 20px;
-    font-weight: 700;
+    font-weight: 500;
     color: #FFF;
     text-align: center;
   }
@@ -451,12 +453,13 @@ p {
   }
 
   .mail-button {
+    @extend .primary-description;
+
     padding: 13px 40px;
     background-color: transparent;
     border: 2px solid #5BE9B9;
     border-radius: 999px;
     color: #FFF;
-    font-size: 20px;
     cursor: pointer;
     transition: all .5s ease;
     display: flex;
@@ -503,7 +506,7 @@ p {
 
       &:nth-child(odd),
       &:nth-child(even) {
-        margin: 0px 5px;
+        margin: 0px 10px;
       }
 
       &:first-child {
@@ -513,12 +516,21 @@ p {
       &:last-child {
         margin-right: 0px;
       }
+
+      &.medium {
+        background-color: #000;
+        border-radius: 3px;
+      }
     }
 
     .media-icons {
       pointer-events: none;
-      width: 45px;
-      padding: 5px;
+      width: 32px;
+      height: 32px;
+
+      &.medium {
+        padding: 5px;
+      }
     }
   }
 }

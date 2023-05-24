@@ -75,5 +75,11 @@ export default class HomeComponent extends Component {
     href: 'https://www.instagram.com/careless__soul__/',
     ariaLabel: 'Visit my Instagram profile',
     imgName: 'instagram.svg'
+  }, {
+    newTabAction: true,
+    href: 'https://medium.com/@manojravi.official',
+    ariaLabel: 'Visit my Medium profile',
+    imgName: 'medium.svg',
+    inputClass: 'medium'
   }];
 }

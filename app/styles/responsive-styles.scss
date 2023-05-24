@@ -1,13 +1,28 @@
 @media screen and (max-width: 479px) {
+  body {
+    font-size: 14px;
+  }
+
+  .page-title {
+    font-size: 32px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .normal-title {
+    font-size: 18px;
+  }
+
+  .primary-description {
+    font-size: 16px;
+  }
+
   .main.container {
     .title {
-      font-size: 32px;
       font-weight: 700;
       margin-bottom: 24px;
-    }
-
-    .description {
-      font-size: 17px;
     }
 
     .avatar {
@@ -16,16 +31,11 @@
     }
   }
 
-  .devices {
-    max-width: 100%;
-  }
-
   .introduction {
     padding-top: 80px;
 
     .container {
       .name {
-        font-size: 22px;
         margin-bottom: 24px;
       }
 
@@ -36,13 +46,8 @@
   }
 
   .experience.container {
-    width: calc(100% - 48px);
     margin-top: -224px;
     padding: 50px 30px;
-
-    .title {
-      font-size: 22px;
-    }
 
     .organisation-container {
       .logo {
@@ -70,7 +75,6 @@
     padding-top: 80px;
 
     .title {
-      font-size: 22px;
       margin-bottom: 20px;
     }
 
@@ -87,19 +91,11 @@
       .project {
         width: 100%;
         margin-bottom: 20px;
-
-        .details {
-
-          .description {
-            font-size: 16px;
-          }
-        }
       }
     }
   }
 
   .hire-me.container {
-    width: calc(100% - 48px);
     margin: 0px auto -135px auto;
     flex-direction: column;
     padding: 40px 25px;
@@ -113,8 +109,6 @@
     }
 
     .mail-button {
-      font-size: 17px;
-
       .mail-icon {
         width: 17px;
       }
@@ -126,7 +120,7 @@
 
     .media-container {
       .media-icons {
-        width: 40px;
+        // width: 40px;
       }
     }
   }
