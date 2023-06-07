@@ -81,5 +81,11 @@ export default class HomeComponent extends Component {
     ariaLabel: 'Visit my Medium profile',
     imgName: 'medium.svg',
     inputClass: 'medium'
+  }, {
+    newTabAction: true,
+    href: 'https://leetcode.com/manojravi',
+    ariaLabel: 'Check my LeetCode profile',
+    imgName: 'leetcode.svg',
+    inputClass: 'leetcode'
   }];
 }
